@@ -40,6 +40,51 @@ function getHumanChoice() {
 let humanScore = 0;
 let computerScore = 0;
 
+function playRound(humanChoice, computerChoice) {
+
+    humanChoice.toLowerCase()
+    
+    if (humanChoice === 'rock' && computerChoice === 'paper') {
+        return "You lose! Paper beats rock." 
+    }
+
+    computerScore ++;
+
+    else if (humanChoice === 'paper' && computerChoice === 'rock') {
+        return "You win! Paper beats rock."
+    }
+
+    computerScore++;
+
+    else if (humanChoice === 'scissors' && computerChoice === 'rock') {
+        return "You lose! Rock beats scissors."
+    }
+
+    computerScore ++;
+
+    else if (humanChoice === 'scissors' && computerChoice === 'paper') {
+        return "You win! Scissors beats paper."
+    }
+
+    humanScore ++;
+
+    else if (humanChoice === 'paper' && computerChoice === 'scissors') {
+        return "You lose! Scissors beats paper."
+    }
+
+    computerScore ++;
+
+    else if (humanChoice === '')
+
+
+
+
+
+    
+    
+
+
+
 
 
 
