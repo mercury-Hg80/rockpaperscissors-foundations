@@ -40,6 +40,11 @@ function getHumanChoice() {
 let humanScore = 0;
 let computerScore = 0;
 
+/* Organize rock paper scissor game by hands played */
+/* Score will go up by increments of 1 depending on winner */
+/* humanChoice will be case insensitive */
+/* Set conditions for winner and loser return responses */
+
 function playRound(humanChoice, computerChoice) {
 
     humanChoice.toLowerCase()
@@ -47,42 +52,59 @@ function playRound(humanChoice, computerChoice) {
     if (humanChoice === 'rock' && computerChoice === 'paper') {
         return "You lose! Paper beats rock." 
     }
+    computerScore++;
 
-    computerScore ++;
+    else if (humanChoice === 'rock' && computerChoice === 'rock') {
+        return "Same response! No one wins a point."
+    }
+
+    else if (humanChoice === 'rock' && computerChoice === 'scissors') {
+        return "You win! Rock beats scissors."
+    }
+    humanScore++;
+
+    else if (humanChoice === 'paper' && computerChoice === 'paper') {
+        return "Same response! No one wins a point."
+    }
 
     else if (humanChoice === 'paper' && computerChoice === 'rock') {
         return "You win! Paper beats rock."
     }
+    humanScore++;
 
+    else if (humanChoice === 'paper' && computerChoice === 'scissors'){
+        return "You lose! Scissors beats paper."
+    }
     computerScore++;
+
+    else if (humanChoice === 'scissors' && computerChoice === 'paper') {
+        return "You win! Scissors beats paper"
+    }
+    humanScore++;
 
     else if (humanChoice === 'scissors' && computerChoice === 'rock') {
         return "You lose! Rock beats scissors."
     }
+    computerScore++;
 
-    computerScore ++;
-
-    else if (humanChoice === 'scissors' && computerChoice === 'paper') {
-        return "You win! Scissors beats paper."
+    else if (humanChoice === 'scissors' && computerChoice === 'scissors') {
+        return "Same response! No one wins a point."
     }
 
-    humanScore ++;
-
-    else if (humanChoice === 'paper' && computerChoice === 'scissors') {
-        return "You lose! Scissors beats paper."
+    else {
+        humanScore += 1;
+        compScore += 1;
+        return "Tie!"
     }
 
-    computerScore ++;
 
-    else if (humanChoice === '')
-
+}
 
 
 
 
     
     
-
 
 
 
