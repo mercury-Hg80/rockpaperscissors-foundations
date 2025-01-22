@@ -24,19 +24,21 @@ function getComputerChoice(){
     
     }
 
-let userInput = prompt("rock, paper, scissor!")
+
+/* Prompt for user input of their guess 
+Use a function that brings userInput against computer choice */
+
 
 function getHumanChoice() {
 
-    
-
-
-
-
-
+    let userInput = prompt("enter: rock, paper, or scissors")
+    console.log("you chose:", userInput)
 
 
 }
+
+let humanScore = 0;
+let computerScore = 0;
 
 
 
