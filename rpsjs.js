@@ -24,6 +24,19 @@ function getComputerChoice(){
     
     }
 
+let userInput = prompt("rock, paper, scissor!")
+
+function getHumanChoice() {
+
+    
+
+
+
+
+
+
+
+}
 
 
 
