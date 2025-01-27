@@ -1,7 +1,3 @@
-/* Call function to make choice of 3 parameters */
-/* Function must determine relationship of parameter to number */
-/* Through random number generator (aka Math.random()) will invoke a parameter */
-/* Math.random() method will return a number >= to 0 or < 1 */
 
 
 function getComputerChoice() {
@@ -23,34 +19,7 @@ function getComputerChoice() {
 }
     
 
-    
-    
 
-
-/* Prompt for user input of their guess 
-Use a function that brings userInput against computer choice
-
-
-
-function getHumanChoice(){
-
-    let userInput = prompt("enter: rock, paper, or scissors").toLowerCase();
-    console.log("you chose:", userInput);
-    return userInput;
-
-
-}
-
-
-/* Organize rock paper scissor game by hands played */
-/* Score will go up by increments of 1 depending on winner */
-/* humanChoice will be case insensitive */
-/* Set conditions for winner and loser return responses */
-/* WHEN YOU WORK ON THIS NEXT, MOVE THE SCORES INTO THE FUNCTIONS */
-
-
-/*Create playGame function */
-/* Embed playRound() function into playGame() */
 
 function playGame() {
     let humanScore = 0;
