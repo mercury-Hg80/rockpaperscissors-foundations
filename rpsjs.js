@@ -54,7 +54,6 @@ function playGame() {
     }
 
 
-
     if (humanScore > computerScore) {
         console.log("You win the game!");
     } else if (humanScore < computerScore) {
