@@ -4,41 +4,43 @@
 /* Math.random() method will return a number >= to 0 or < 1 */
 
 
-function getComputerChoice(){
-    
+function getComputerChoice() {
+
     let randomNumber = Math.random();
 
     if (randomNumber < 0.30) {
-        return "rock" 
+        return "rock"; 
     }
     
     else if (randomNumber < 0.60) {
-        return "paper"
+        return "paper";
     }
 
     else {
-        return "scissors"
+        return "scissors";
     }
+
+}
     
 
     
-    }
+    
 
 
 /* Prompt for user input of their guess 
-Use a function that brings userInput against computer choice */
+Use a function that brings userInput against computer choice
 
 
-function getHumanChoice() {
 
-    let userInput = prompt("enter: rock, paper, or scissors")
-    console.log("you chose:", userInput)
+function getHumanChoice(){
+
+    let userInput = prompt("enter: rock, paper, or scissors").toLowerCase();
+    console.log("you chose:", userInput);
+    return userInput;
 
 
 }
 
-let humanScore = 0;
-let computerScore = 0;
 
 /* Organize rock paper scissor game by hands played */
 /* Score will go up by increments of 1 depending on winner */
@@ -46,71 +48,68 @@ let computerScore = 0;
 /* Set conditions for winner and loser return responses */
 /* WHEN YOU WORK ON THIS NEXT, MOVE THE SCORES INTO THE FUNCTIONS */
 
-function playRound(humanChoice, computerChoice) {
 
-    humanChoice.toLowerCase()
-    
-    if (humanChoice === 'rock' && computerChoice === 'paper') {
-        computerScore++;
-        return "You lose! Paper beats rock." 
-    }
-    
-
-    else if (humanChoice === 'rock' && computerChoice === 'rock') {
-        return "Same response! No one wins a point."
-    }
-
-    else if (humanChoice === 'rock' && computerChoice === 'scissors') {
-        humanScore++;
-        return "You win! Rock beats scissors."
-    }
-
-    else if (humanChoice === 'paper' && computerChoice === 'paper') {
-        return "Same response! No one wins a point."
-    }
-
-    else if (humanChoice === 'paper' && computerChoice === 'rock') {
-        humanScore++;
-        return "You win! Paper beats rock."
-    }
-
-    else if (humanChoice === 'paper' && computerChoice === 'scissors'){
-        computerScore++;
-        return "You lose! Scissors beats paper."
-    }
-
-    else if (humanChoice === 'scissors' && computerChoice === 'paper') {
-        humanScore++;
-        return "You win! Scissors beats paper"
-    }
-    
-
-    else if (humanChoice === 'scissors' && computerChoice === 'rock') {
-        computerScore++
-        return "You lose! Rock beats scissors."
-    }
-
-    else if (humanChoice === 'scissors' && computerChoice === 'scissors') {
-        return "Same response! No one wins a point."
-    }
-
-    else {
-        humanScore += 1;
-        compScore += 1;
-        return "Tie!"
-    }
-
-
-}
+/*Create playGame function */
+/* Embed playRound() function into playGame() */
 
 function playGame() {
-    function playRound()
+    let humanScore = 0;
+    let computerScore = 0;
+
+
+    function playRound (humanChoice, computerChoice) {
+
+       if (humanChoice === computerChoice) {
+        return "Same response! No one wins a point.";
+       } else if (
+        (humanChoice === 'rock' && computerChoice === 'scissors') || 
+        (humanChoice === 'paper' && computerChoice === 'rock') ||
+        (humanChoice === 'scissors' && computerChoice === 'paper')
+       ) {
+        humanScore++;
+        return `You win! ${humanChoice} beats ${computerChoice}.`;
+        
+       } else {
+        computerScore++;
+        return `You win! ${humanChoice} beats ${computerChoice}.` ;
+
+       }
+    }
+       
+    for (let i = 0; i< 5; i++) {
+        let humanChoice = getHumanChoice();
+        let computerChoice = getComputerChoice();
+        console.log(playRound(humanChoice, computerChoice));
+        console.log(`Score: Human ${humanScore} - Computer ${computerScore}`);
+
+    }
+
+
+
+    if (humanScore > computerScore) {
+        console.log("You win the game!");
+    } else if (humanScore < computerScore) {
+        console.log("You lose the game!"); 
+    } else { 
+        console.log("It's a tie!");
+    }
+
+        
+        
+
+    playRound();
+    
 
 }
 
 
-    
-    
+playGame();
+
+/*Before submitting, RE-WRITE ALL PSEUDOCODE
+Figure out why you used what you used
+Go over all concepts for strings and functions
+Watch the functions youtube video */
+
 
 
 
