@@ -105,10 +105,6 @@ function playGame() {
 
 playGame();
 
-/*Before submitting, RE-WRITE ALL PSEUDOCODE
-Figure out why you used what you used
-Go over all concepts for strings and functions
-Watch the functions youtube video */
 
 
 
