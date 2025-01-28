@@ -16,6 +16,20 @@ function getComputerChoice() {
         return "scissors";
     }
 
+
+
+}
+
+
+function getHumanChoice () {
+    let choice = prompt("please enter rock, paper, or scissors!").toLowerCase();
+
+    if (choice === null && undefined) {
+        alert("Game canceled.");
+        return null;
+    }
+
+    return choice;
 }
     
 /* playGame(), 2 variables containing humanScore and computerScore starting at 0
