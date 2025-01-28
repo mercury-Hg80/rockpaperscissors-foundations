@@ -44,7 +44,7 @@ function playGame() {
         
        } else {
         computerScore++;
-        return `You win! ${humanChoice} beats ${computerChoice}.` ;
+        return `You lose! ${humanChoice} beats ${computerChoice}.` ;
 
        }
     }
